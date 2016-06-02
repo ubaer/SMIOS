@@ -214,6 +214,7 @@
 				TargetAttributes = {
 					F5F48AEB1CF840D60082417F = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = K6ENEA8PVB;
 					};
 					F5F48AFF1CF840D60082417F = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -427,10 +428,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = klassendiagramproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.sm.klassendiagramproj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -438,10 +443,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = klassendiagramproj/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.sm.klassendiagramproj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -512,6 +521,7 @@
 				F5F48B161CF840D60082417F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5F48B171CF840D60082417F /* Build configuration list for PBXNativeTarget "klassendiagramprojTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +530,7 @@
 				F5F48B191CF840D60082417F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5F48B1A1CF840D60082417F /* Build configuration list for PBXNativeTarget "klassendiagramprojUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +539,7 @@
 				F5F48B1C1CF840D60082417F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

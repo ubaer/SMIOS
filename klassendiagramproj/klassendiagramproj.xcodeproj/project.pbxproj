@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F55C856A1D0199CF007C77E8 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */; };
 		F5F48AF01CF840D60082417F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F48AEF1CF840D60082417F /* AppDelegate.swift */; };
 		F5F48AF21CF840D60082417F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F48AF11CF840D60082417F /* ViewController.swift */; };
 		F5F48AF51CF840D60082417F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F48AF31CF840D60082417F /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		F5F48AEC1CF840D60082417F /* klassendiagramproj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = klassendiagramproj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F48AEF1CF840D60082417F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5F48AF11CF840D60082417F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				F5F48B271CF8459C0082417F /* Pomodoro.swift */,
 				F5F48B291CF845F40082417F /* PomodoroData.swift */,
 				F5F48B2B1CF846650082417F /* EUnit.swift */,
+				F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */,
 			);
 			path = klassendiagramproj;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				F5F48AF01CF840D60082417F /* AppDelegate.swift in Sources */,
 				F5F48B241CF844D80082417F /* User.swift in Sources */,
 				F5F48B2A1CF845F40082417F /* PomodoroData.swift in Sources */,
+				F55C856A1D0199CF007C77E8 /* ToDoListViewController.swift in Sources */,
 				F5F48B201CF841EA0082417F /* ToDoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

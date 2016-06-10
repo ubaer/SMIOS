@@ -10,6 +10,7 @@ import UIKit
 
 class ToDoListViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var toDoItemList: UITableView!
     @IBAction func btnNewToDoItem(sender: AnyObject) {
         
         var titleTextField: UITextField?

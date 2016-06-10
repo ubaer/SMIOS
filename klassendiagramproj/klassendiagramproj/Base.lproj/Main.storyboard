@@ -255,6 +255,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="toDoItemList" destination="cgc-fX-YOs" id="IpD-em-yfI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEr-sM-IGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,7 +14,7 @@ class StatisticsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(StatisticsViewController.respond(_:)))
         swipeRight.direction = .Right
         view.addGestureRecognizer(swipeRight)

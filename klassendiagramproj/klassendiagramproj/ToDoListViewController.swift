@@ -14,7 +14,7 @@ class ToDoListViewController: UIViewController, UITextFieldDelegate, UITableView
     var itemTitle: String = ""
     var itemDescription: String = ""
     var itemEstPomodoro: Int = 0
-    var itemDeadline: NSDate = NSDate()
+    var itemDeadline: String = ""
     @IBOutlet weak var toDoItemList: UITableView!{
         didSet {
             toDoItemList.dataSource = self
@@ -34,18 +34,14 @@ class ToDoListViewController: UIViewController, UITextFieldDelegate, UITableView
             DatePickerDialog().show("When is this item due?", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .Date) {
                 (date) -> Void in
                 let str = "\(date)"
-                let subStr = str[str.startIndex.advancedBy(0)...str.startIndex.advancedBy(9)]
+                print(str)
+                let subStr = str[str.startIndex.advancedBy(0)...str.startIndex.advancedBy(18)]
                 
-                let dateFormatter = NSDateFormatter()
-                dateFormatter.dateFormat = "YYYY-MM-dd"
-                dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT+0:00")
-                let date = dateFormatter.dateFromString(subStr)
-                self.itemDeadline = date!
-                
-                var toDoItem = ToDoItem(id: self.itemArray.count + 1, title: self.itemTitle, description: self.itemDescription, estAmount: self.itemEstPomodoro, deadline: self.itemDeadline)
+                var toDoItem = ToDoItem(id: self.itemArray.count + 1, title: self.itemTitle, description: self.itemDescription, estAmount: self.itemEstPomodoro, deadline: subStr)
                 
                 self.itemArray.append(toDoItem)
-                print(self.itemArray.count)
+                
+                self.toDoItemList.reloadData()
             }
             
         })
@@ -91,6 +87,14 @@ class ToDoListViewController: UIViewController, UITextFieldDelegate, UITableView
         cell.textLabel?.text = itemArray[indexPath.row].title
         
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var selectedRow = self.toDoItemList.indexPathForSelectedRow
+        var selectedItem = self.itemArray[selectedRow!.row]
+        var controller = segue.destinationViewController as! PomodoroViewController
+        
+        controller.item = selectedItem
     }
     
     override func viewDidLoad() {

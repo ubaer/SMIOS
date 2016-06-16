@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a9x-XQ-kGG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a9x-XQ-kGG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -104,7 +104,7 @@
         <!--Prefences-->
         <scene sceneID="1vy-t1-hzJ">
             <objects>
-                <viewController id="fv7-oD-uVg" sceneMemberID="viewController">
+                <viewController id="fv7-oD-uVg" customClass="PreferencesViewController" customModule="klassendiagramproj" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EBJ-ue-bFk"/>
                         <viewControllerLayoutGuide type="bottom" id="4co-Iz-6m9"/>
@@ -188,12 +188,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QDw-nD-HeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="316" y="-4"/>
+            <point key="canvasLocation" x="340" y="-15"/>
         </scene>
         <!--Statistics-->
         <scene sceneID="wHD-c2-waj">
             <objects>
-                <viewController id="6yf-ZG-a6o" sceneMemberID="viewController">
+                <viewController id="6yf-ZG-a6o" customClass="StatisticsViewController" customModule="klassendiagramproj" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OMA-GC-g00"/>
                         <viewControllerLayoutGuide type="bottom" id="qgf-hv-9rm"/>
@@ -203,7 +203,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Statistics Scherm" translatesAutoresizingMaskIntoConstraints="NO" id="Ucc-Hb-eJG">
-                                <rect key="frame" x="-48" y="13" width="457" height="615"/>
+                                <rect key="frame" x="-60" y="-58" width="457" height="600"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -212,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nHY-So-xL7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2512" y="-60"/>
+            <point key="canvasLocation" x="2508" y="-15"/>
         </scene>
         <!--To Do List-->
         <scene sceneID="ost-SW-0aR">
@@ -250,8 +250,14 @@
                     <navigationItem key="navigationItem" title="To Do List" id="rn7-0a-Wyr">
                         <barButtonItem key="rightBarButtonItem" title="+" id="bFT-1a-SDy">
                             <color key="tintColor" red="0.90980392160000001" green="0.23921568630000001" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="btnNewToDoItem:" destination="VUb-s3-orT" id="D7M-kz-ykI"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="toDoItemList" destination="cgc-fX-YOs" id="IpD-em-yfI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEr-sM-IGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

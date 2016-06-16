@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F55C856A1D0199CF007C77E8 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */; };
+		F585872B1D09649D008B0775 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F585872A1D09649D008B0775 /* PreferencesViewController.swift */; };
+		F585872D1D096637008B0775 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F585872C1D096637008B0775 /* StatisticsViewController.swift */; };
 		F5F48AF01CF840D60082417F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F48AEF1CF840D60082417F /* AppDelegate.swift */; };
 		F5F48AF21CF840D60082417F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F48AF11CF840D60082417F /* ViewController.swift */; };
 		F5F48AF51CF840D60082417F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F48AF31CF840D60082417F /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
+		F585872A1D09649D008B0775 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		F585872C1D096637008B0775 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		F5F48AEC1CF840D60082417F /* klassendiagramproj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = klassendiagramproj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F48AEF1CF840D60082417F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5F48AF11CF840D60082417F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				F5F48B291CF845F40082417F /* PomodoroData.swift */,
 				F5F48B2B1CF846650082417F /* EUnit.swift */,
 				F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */,
+				F585872A1D09649D008B0775 /* PreferencesViewController.swift */,
+				F585872C1D096637008B0775 /* StatisticsViewController.swift */,
 			);
 			path = klassendiagramproj;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 				F5F48AF21CF840D60082417F /* ViewController.swift in Sources */,
 				F5F48B2C1CF846650082417F /* EUnit.swift in Sources */,
 				F5F48B261CF844F00082417F /* LearnSession.swift in Sources */,
+				F585872D1D096637008B0775 /* StatisticsViewController.swift in Sources */,
 				F5F48B221CF843800082417F /* SleepData.swift in Sources */,
 				F5F48B281CF8459C0082417F /* Pomodoro.swift in Sources */,
 				F5F48AF01CF840D60082417F /* AppDelegate.swift in Sources */,
@@ -291,6 +298,7 @@
 				F5F48B2A1CF845F40082417F /* PomodoroData.swift in Sources */,
 				F55C856A1D0199CF007C77E8 /* ToDoListViewController.swift in Sources */,
 				F5F48B201CF841EA0082417F /* ToDoItem.swift in Sources */,
+				F585872B1D09649D008B0775 /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

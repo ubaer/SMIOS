@@ -10,6 +10,11 @@ import UIKit
 
 class ToDoListViewController: UIViewController, UITextFieldDelegate {
 
+    var itemArray: [ToDoItem] = []
+    var itemTitle: String = ""
+    var itemDescription: String = ""
+    var itemEstPomodoro: Int = 0
+    var itemDeadline: NSDate = NSDate()
     @IBOutlet weak var toDoItemList: UITableView!
     @IBAction func btnNewToDoItem(sender: AnyObject) {
         
@@ -18,14 +23,35 @@ class ToDoListViewController: UIViewController, UITextFieldDelegate {
         var estPomoAmtTextField: UITextField?
         let alertController = UIAlertController(title: "New Item", message: "Fill out the required fields", preferredStyle: .Alert)
         let ok = UIAlertAction(title: "Confirm", style: .Cancel, handler: { (action) -> Void in
-            print("Ok Button Pressed")
+            self.itemTitle = (titleTextField?.text)!
+            self.itemDescription = (descriptionTextField?.text)!
+            self.itemEstPomodoro = Int(estPomoAmtTextField!.text!)!
+            
+            DatePickerDialog().show("When is this item due?", doneButtonTitle: "Done", cancelButtonTitle: "Cancel", datePickerMode: .Date) {
+                (date) -> Void in
+                let str = "\(date)"
+                let subStr = str[str.startIndex.advancedBy(0)...str.startIndex.advancedBy(9)]
+                
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "YYYY-MM-dd"
+                dateFormatter.timeZone = NSTimeZone(abbreviation: "GMT+0:00")
+                let date = dateFormatter.dateFromString(subStr)
+                self.itemDeadline = date!
+                
+                var toDoItem = ToDoItem(id: self.itemArray.count + 1, title: self.itemTitle, description: self.itemDescription, estAmount: self.itemEstPomodoro, deadline: self.itemDeadline)
+                
+                self.itemArray.append(toDoItem)
+                print(self.itemArray.count)
+            }
+            
         })
         let cancel = UIAlertAction(title: "Cancel", style: .Default) { (action) -> Void in
             self.dismissViewControllerAnimated(true, completion: nil)
+            
         }
         
-        alertController.addAction(ok)
         alertController.addAction(cancel)
+        alertController.addAction(ok)
         alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
             // Enter the textfiled customization code here.
             titleTextField = textField

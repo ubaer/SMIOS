@@ -8,14 +8,18 @@
 
 import UIKit
 
-class ToDoListViewController: UIViewController, UITextFieldDelegate {
+class ToDoListViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
 
     var itemArray: [ToDoItem] = []
     var itemTitle: String = ""
     var itemDescription: String = ""
     var itemEstPomodoro: Int = 0
     var itemDeadline: NSDate = NSDate()
-    @IBOutlet weak var toDoItemList: UITableView!
+    @IBOutlet weak var toDoItemList: UITableView!{
+        didSet {
+            toDoItemList.dataSource = self
+        }
+    }
     @IBAction func btnNewToDoItem(sender: AnyObject) {
         
         var titleTextField: UITextField?
@@ -73,6 +77,22 @@ class ToDoListViewController: UIViewController, UITextFieldDelegate {
         presentViewController(alertController, animated: true, completion: nil)
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemArray.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as UITableViewCell
+        
+        cell.textLabel?.text = itemArray[indexPath.row].title
+        
+        return cell
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -106,7 +126,7 @@ class ToDoListViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

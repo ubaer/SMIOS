@@ -11,9 +11,8 @@
 		3E3F9D3F1D0AC5FA0003F9A0 /* PService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F9D3E1D0AC5FA0003F9A0 /* PService.swift */; };
 		3E3F9D411D0AC86B0003F9A0 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F9D401D0AC86B0003F9A0 /* PersistenceService.swift */; };
 		3E3F9D431D0ACDB80003F9A0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F9D421D0ACDB80003F9A0 /* RegisterViewController.swift */; };
-		F55C856A1D0199CF007C77E8 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */; };
 		F5538A741D12D2E60001365D /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5538A731D12D2E60001365D /* alarm1.mp3 */; };
-		F55C856A1D0199CF007C77E8 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55C85691D0199CF007C77E8 /* DatePickerDialog.swift */; };
+		F55C856A1D0199CF007C77E8 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55C85691D0199CF007C77E8 /* DatabaseService.swift */; };
 		F56949231D13EC7B009BD1B4 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56949221D13EC7B009BD1B4 /* ToDoListViewController.swift */; };
 		F585872B1D09649D008B0775 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F585872A1D09649D008B0775 /* PreferencesViewController.swift */; };
 		F585872D1D096637008B0775 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F585872C1D096637008B0775 /* StatisticsViewController.swift */; };
@@ -56,9 +55,8 @@
 		3E3F9D3E1D0AC5FA0003F9A0 /* PService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PService.swift; sourceTree = "<group>"; };
 		3E3F9D401D0AC86B0003F9A0 /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		3E3F9D421D0ACDB80003F9A0 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		F5538A731D12D2E60001365D /* alarm1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm1.mp3; path = ../../../alarm1.mp3; sourceTree = "<group>"; };
-		F55C85691D0199CF007C77E8 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
+		F55C85691D0199CF007C77E8 /* DatabaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		F56949221D13EC7B009BD1B4 /* ToDoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		F585872A1D09649D008B0775 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		F585872C1D096637008B0775 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
@@ -158,7 +156,7 @@
 				F5F48B271CF8459C0082417F /* Pomodoro.swift */,
 				F5F48B291CF845F40082417F /* PomodoroData.swift */,
 				F5F48B2B1CF846650082417F /* EUnit.swift */,
-				F55C85691D0199CF007C77E8 /* DatePickerDialog.swift */,
+				F55C85691D0199CF007C77E8 /* DatabaseService.swift */,
 				F56949221D13EC7B009BD1B4 /* ToDoListViewController.swift */,
 				F585872A1D09649D008B0775 /* PreferencesViewController.swift */,
 				F585872C1D096637008B0775 /* StatisticsViewController.swift */,
@@ -331,8 +329,8 @@
 				3E3F9D3D1D0AC5F00003F9A0 /* DatabaseService.swift in Sources */,
 				3E3F9D411D0AC86B0003F9A0 /* PersistenceService.swift in Sources */,
 				3E3F9D431D0ACDB80003F9A0 /* RegisterViewController.swift in Sources */,
-				F55C856A1D0199CF007C77E8 /* ToDoListViewController.swift in Sources */,
-				F55C856A1D0199CF007C77E8 /* DatePickerDialog.swift in Sources */,
+				F55C856A1D0199CF007C77E8 /* DatabaseService.swift in Sources */,
+				F55C856A1D0199CF007C77E8 /* DatabaseService.swift in Sources */,
 				F5F48B201CF841EA0082417F /* ToDoItem.swift in Sources */,
 				3E3F9D3F1D0AC5FA0003F9A0 /* PService.swift in Sources */,
 				F56949231D13EC7B009BD1B4 /* ToDoListViewController.swift in Sources */,

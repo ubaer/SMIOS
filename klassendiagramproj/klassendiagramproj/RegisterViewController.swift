@@ -18,11 +18,11 @@ class RegisterViewController: UIViewController {
         let password:String = tfPassword.text!
         
         if (DatabaseService.registerUser(username, password: password, firstname: "Gerrit", lastname: "Hiemstra")) {
-            let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("ViewController")
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let vc : AnyObject! = storyBoard.instantiateViewControllerWithIdentifier("ViewController")
             self.showViewController(vc as! ViewController, sender: vc)
         }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

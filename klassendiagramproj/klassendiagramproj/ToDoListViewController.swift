@@ -15,11 +15,13 @@ class ToDoListViewController: UIViewController, UITextFieldDelegate, UITableView
     var itemDescription: String = ""
     var itemEstPomodoro: Int = 0
     var itemDeadline: String = ""
+    
     @IBOutlet weak var toDoItemList: UITableView!{
         didSet {
             toDoItemList.dataSource = self
         }
     }
+    
     @IBAction func btnNewToDoItem(sender: AnyObject) {
         
         var titleTextField: UITextField?
@@ -115,6 +117,11 @@ class ToDoListViewController: UIViewController, UITextFieldDelegate, UITableView
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ToDoListViewController.respond(_:)))
         swipeLeft.direction = .Left
         view.addGestureRecognizer(swipeLeft)
+        
+        let LoggedInUser:User = PersistenceService.get("LoggedInUser") as! User
+        
+        let toDoItems:Array<ToDoItem> = DatabaseService.getToDoItems(LoggedInUser.id)
+        print(toDoItems.count)
     }
     
     func respond(gesture :UIGestureRecognizer) {

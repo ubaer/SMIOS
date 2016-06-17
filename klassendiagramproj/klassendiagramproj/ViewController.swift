@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
     @IBOutlet weak var tfUsername: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     
@@ -18,12 +19,12 @@ class ViewController: UIViewController {
         let password:String = tfPassword.text!
         
         if (DatabaseService.validateLoginCredentials(username, password: password)) {
-            let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("ToDoListViewController")
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let vc : AnyObject! = storyBoard.instantiateViewControllerWithIdentifier("ToDoListViewController")
             self.showViewController(vc as! ToDoListViewController, sender: vc)
         }
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

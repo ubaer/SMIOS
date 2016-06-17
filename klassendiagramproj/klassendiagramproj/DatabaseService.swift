@@ -484,7 +484,7 @@ public class DatabaseService {
         return sleepDataSet
     }
     
-    public static func executeDatabaseAction(postData : NSString, phpUrl : String) -> NSDictionary {
+    private static func executeDatabaseAction(postData : NSString, phpUrl : String) -> NSDictionary {
         //  Meesturen van username en password
         let post:NSString = postData
         

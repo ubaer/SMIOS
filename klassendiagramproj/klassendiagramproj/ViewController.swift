@@ -12,6 +12,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tfUsername: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
+    
+    @IBAction func btnLogin(sender: AnyObject) {
+        let username:String = tfUsername.text!
+        let password:String = tfPassword.text!
+        
+        if (DatabaseService.validateLoginCredentials(username, password: password)) {
+            let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("ToDoListViewController")
+            self.showViewController(vc as! ToDoListViewController, sender: vc)
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +33,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func btnLogin_Touch(sender: UIButton) {
-        let username:String = tfUsername.text!
-        let password:String = tfPassword.text!
-        
-        if (DatabaseService.validateLoginCredentials(username, password: password)) {
-            let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("ToDoListViewController")
-            self.showViewController(vc as! ToDoListViewController, sender: vc)
-        }
-    }
-    
 }
 

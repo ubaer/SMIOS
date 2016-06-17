@@ -13,6 +13,16 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var tfUsername: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     
+    @IBAction func btnRegister(sender: AnyObject) {
+        let username:String = tfUsername.text!
+        let password:String = tfPassword.text!
+        
+        if (DatabaseService.registerUser(username, password: password, firstname: "Gerrit", lastname: "Hiemstra")) {
+            let vc : AnyObject! = self.storyboard!.instantiateViewControllerWithIdentifier("ViewController")
+            self.showViewController(vc as! ViewController, sender: vc)
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +34,7 @@ class RegisterViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func btnRegister_Click(sender: AnyObject) {
-        let username:String = tfUsername.text!
-        let password:String = tfPassword.text!
-        DatabaseService.registerUser(username, password: password, firstname: "Gerrit", lastname: "Hiemstra")
-    }
+
 
     /*
     // MARK: - Navigation

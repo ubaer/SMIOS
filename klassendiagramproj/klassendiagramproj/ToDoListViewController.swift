@@ -37,7 +37,13 @@ class ToDoListViewController: UIViewController, UITextFieldDelegate, UITableView
                 print(str)
                 let subStr = str[str.startIndex.advancedBy(0)...str.startIndex.advancedBy(18)]
                 
-                var toDoItem = ToDoItem(id: self.itemArray.count + 1, title: self.itemTitle, description: self.itemDescription, estAmount: self.itemEstPomodoro, deadline: subStr)
+                
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+                
+                let deadlineDate = dateFormatter.dateFromString(subStr)
+                
+                var toDoItem = ToDoItem(id: self.itemArray.count + 1, title: self.itemTitle, description: self.itemDescription, estAmount: self.itemEstPomodoro, deadline: deadlineDate!)
                 
                 self.itemArray.append(toDoItem)
                 

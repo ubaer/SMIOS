@@ -272,7 +272,7 @@ public class DatabaseService {
                 
                 let deadlineDate = dateFormatter.dateFromString(deadline)
                 
-                toDoItems.append(ToDoItem(id: toDoItemId, title: title, description: description, estAmount: estPmdAmount, deadline: deadlineDate!, completed: completedBool))
+                toDoItems.append(ToDoItem(id: toDoItemId, title: title, description: description, estAmount: estPmdAmount, deadline: deadlineDate!))
             }
         } else {
             var error_msg:NSString
@@ -360,7 +360,7 @@ public class DatabaseService {
                 let value:String = pomodoroData.valueForKey("value") as! String
                 let unit:String = pomodoroData.valueForKey("unit") as! String
                 
-                var newData:PomodoroData = PomodoroData(id: pomodoroDataId, description: description, value: value)
+                let newData:PomodoroData = PomodoroData(id: pomodoroDataId, description: description, value: value)
                 
                 for enumValue in EUnit.EUnitValues {
                     if (enumValue.rawValue == unit) {

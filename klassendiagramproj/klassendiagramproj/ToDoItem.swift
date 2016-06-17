@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ToDoItem
+public class ToDoItem
 {
     var id: Int
     var title: String

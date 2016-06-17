@@ -8,12 +8,12 @@
 
 import Foundation
 
-class Pomodoro
+public class Pomodoro
 {
     var id: Int
-    var startTime: datum
+    var startTime:NSDate
     
-    init(id: Int, startTime: datum)
+    init(id: Int, startTime: NSDate)
     {
         self.id = id
         self.startTime = startTime

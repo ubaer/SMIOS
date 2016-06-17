@@ -8,14 +8,14 @@
 
 import Foundation
 
-class SleepData
+public class SleepData
 {
     var id:Int
-    var start: datum
-    var end: datum
+    var start:NSDate
+    var end:NSDate
     var timesRestless: Int
     
-    init(id: Int, start: datum, end: datum, var restless: Int)
+    init(id: Int, start: NSDate, end: NSDate, restless: Int)
     {
         self.id = id
         self.start = start

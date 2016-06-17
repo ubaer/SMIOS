@@ -14,6 +14,7 @@
 		F55C856A1D0199CF007C77E8 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */; };
 		F585872B1D09649D008B0775 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F585872A1D09649D008B0775 /* PreferencesViewController.swift */; };
 		F585872D1D096637008B0775 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F585872C1D096637008B0775 /* StatisticsViewController.swift */; };
+		F5AC821D1D12C7D400DDE92A /* PomodoroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AC821C1D12C7D400DDE92A /* PomodoroViewController.swift */; };
 		F5F48AF01CF840D60082417F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F48AEF1CF840D60082417F /* AppDelegate.swift */; };
 		F5F48AF21CF840D60082417F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F48AF11CF840D60082417F /* ViewController.swift */; };
 		F5F48AF51CF840D60082417F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F48AF31CF840D60082417F /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		F585872A1D09649D008B0775 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		F585872C1D096637008B0775 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		F5AC821C1D12C7D400DDE92A /* PomodoroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroViewController.swift; sourceTree = "<group>"; };
 		F5F48AEC1CF840D60082417F /* klassendiagramproj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = klassendiagramproj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F48AEF1CF840D60082417F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5F48AF11CF840D60082417F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +151,8 @@
 				F5F48B271CF8459C0082417F /* Pomodoro.swift */,
 				F5F48B291CF845F40082417F /* PomodoroData.swift */,
 				F5F48B2B1CF846650082417F /* EUnit.swift */,
-				F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */,
+				F55C85691D0199CF007C77E8 /* DatePickerDialog.swift */,
+				F56949221D13EC7B009BD1B4 /* ToDoListViewController.swift */,
 				F585872A1D09649D008B0775 /* PreferencesViewController.swift */,
 				F585872C1D096637008B0775 /* StatisticsViewController.swift */,
 				3E3F9D421D0ACDB80003F9A0 /* RegisterViewController.swift */,
@@ -281,6 +284,7 @@
 			files = (
 				F5F48AFA1CF840D60082417F /* LaunchScreen.storyboard in Resources */,
 				F5F48AF71CF840D60082417F /* Assets.xcassets in Resources */,
+				F5538A741D12D2E60001365D /* alarm1.mp3 in Resources */,
 				F5F48AF51CF840D60082417F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +315,7 @@
 				F5F48B261CF844F00082417F /* LearnSession.swift in Sources */,
 				F585872D1D096637008B0775 /* StatisticsViewController.swift in Sources */,
 				F5F48B221CF843800082417F /* SleepData.swift in Sources */,
+				F5AC821D1D12C7D400DDE92A /* PomodoroViewController.swift in Sources */,
 				F5F48B281CF8459C0082417F /* Pomodoro.swift in Sources */,
 				F5F48AF01CF840D60082417F /* AppDelegate.swift in Sources */,
 				F5F48B241CF844D80082417F /* User.swift in Sources */,

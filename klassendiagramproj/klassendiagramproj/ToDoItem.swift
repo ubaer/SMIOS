@@ -14,21 +14,21 @@ public class ToDoItem
     var title: String
     var description: String
     var estPomodoroAmount: Int
-    var deadline: NSDate
+    var deadline: String
     var completed: Bool
     var childId: Int?
     
-    init(id: Int, title: String, description: String, estAmount: Int, deadline: NSDate, completed : Bool)
+    init(id: Int, title: String, description: String, estAmount: Int, deadline: String)
     {
         self.id = id
         self.title = title
         self.description = description
         self.estPomodoroAmount = estAmount
         self.deadline = deadline
-        self.completed = completed
+        self.completed = false
     }
     
-    init(id: Int, title: String, description: String, estAmount: Int, deadline: NSDate, childId: Int, completed : Bool)
+    init(id: Int, title: String, description: String, estAmount: Int, deadline: String, childId: Int)
     {
         self.id = id
         self.title = title
@@ -37,6 +37,5 @@ public class ToDoItem
         self.deadline = deadline
         self.completed = false
         self.childId = childId
-        self.completed = completed
     }
 }

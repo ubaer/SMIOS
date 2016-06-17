@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PomodoroData
+public class PomodoroData
 {
     var id: Int
     var description: String
@@ -21,5 +21,11 @@ class PomodoroData
         self.description = description
         self.value = value
         self.unit = unit
+    }
+    
+    init(id : Int, description : String, value : String) {
+        self.id = id
+        self.description = description
+        self.value = value
     }
 }

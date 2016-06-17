@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LearnSession
+public class LearnSession
 {
     var id: Int
     var pomodoroLength: Int

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E3F9D3D1D0AC5F00003F9A0 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F9D3C1D0AC5F00003F9A0 /* DatabaseService.swift */; };
+		3E3F9D3F1D0AC5FA0003F9A0 /* PService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F9D3E1D0AC5FA0003F9A0 /* PService.swift */; };
+		3E3F9D411D0AC86B0003F9A0 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F9D401D0AC86B0003F9A0 /* PersistenceService.swift */; };
+		3E3F9D431D0ACDB80003F9A0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F9D421D0ACDB80003F9A0 /* RegisterViewController.swift */; };
 		F55C856A1D0199CF007C77E8 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */; };
 		F585872B1D09649D008B0775 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F585872A1D09649D008B0775 /* PreferencesViewController.swift */; };
 		F585872D1D096637008B0775 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F585872C1D096637008B0775 /* StatisticsViewController.swift */; };
@@ -44,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E3F9D3C1D0AC5F00003F9A0 /* DatabaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		3E3F9D3E1D0AC5FA0003F9A0 /* PService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PService.swift; sourceTree = "<group>"; };
+		3E3F9D401D0AC86B0003F9A0 /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		3E3F9D421D0ACDB80003F9A0 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		F585872A1D09649D008B0775 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		F585872C1D096637008B0775 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +102,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E3F9D3B1D0AC5BA0003F9A0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3E3F9D3C1D0AC5F00003F9A0 /* DatabaseService.swift */,
+				3E3F9D3E1D0AC5FA0003F9A0 /* PService.swift */,
+				3E3F9D401D0AC86B0003F9A0 /* PersistenceService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		F5F48AE31CF840D60082417F = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +135,7 @@
 		F5F48AEE1CF840D60082417F /* klassendiagramproj */ = {
 			isa = PBXGroup;
 			children = (
+				3E3F9D3B1D0AC5BA0003F9A0 /* Services */,
 				F5F48AEF1CF840D60082417F /* AppDelegate.swift */,
 				F5F48AF11CF840D60082417F /* ViewController.swift */,
 				F5F48AF31CF840D60082417F /* Main.storyboard */,
@@ -133,6 +152,7 @@
 				F55C85691D0199CF007C77E8 /* ToDoListViewController.swift */,
 				F585872A1D09649D008B0775 /* PreferencesViewController.swift */,
 				F585872C1D096637008B0775 /* StatisticsViewController.swift */,
+				3E3F9D421D0ACDB80003F9A0 /* RegisterViewController.swift */,
 			);
 			path = klassendiagramproj;
 			sourceTree = "<group>";
@@ -223,7 +243,6 @@
 				TargetAttributes = {
 					F5F48AEB1CF840D60082417F = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = K6ENEA8PVB;
 					};
 					F5F48AFF1CF840D60082417F = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -296,8 +315,12 @@
 				F5F48AF01CF840D60082417F /* AppDelegate.swift in Sources */,
 				F5F48B241CF844D80082417F /* User.swift in Sources */,
 				F5F48B2A1CF845F40082417F /* PomodoroData.swift in Sources */,
+				3E3F9D3D1D0AC5F00003F9A0 /* DatabaseService.swift in Sources */,
+				3E3F9D411D0AC86B0003F9A0 /* PersistenceService.swift in Sources */,
+				3E3F9D431D0ACDB80003F9A0 /* RegisterViewController.swift in Sources */,
 				F55C856A1D0199CF007C77E8 /* ToDoListViewController.swift in Sources */,
 				F5F48B201CF841EA0082417F /* ToDoItem.swift in Sources */,
+				3E3F9D3F1D0AC5FA0003F9A0 /* PService.swift in Sources */,
 				F585872B1D09649D008B0775 /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +466,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = klassendiagramproj/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.sm.klassendiagramproj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,6 +482,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = klassendiagramproj/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.fontys.sm.klassendiagramproj;
 				PRODUCT_NAME = "$(TARGET_NAME)";

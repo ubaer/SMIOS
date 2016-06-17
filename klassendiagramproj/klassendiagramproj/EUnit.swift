@@ -8,15 +8,17 @@
 
 import Foundation
 
-enum EUnit
+enum EUnit : String
 {
-    case BPM
+    case BPM = "Hartslagen per minuuut"
     
-    case Decibel
+    case Decibel = "Decibel"
     
-    case Userdefined
+    case Userdefined = "Zelf gespecificeerde"
     
-    case Steps
+    case Steps = "Stappen"
     
-    case Times
+    case Times = "Aantal afleidingen"
+    
+    static let EUnitValues = [BPM, Decibel, Userdefined, Steps, Times]
 }

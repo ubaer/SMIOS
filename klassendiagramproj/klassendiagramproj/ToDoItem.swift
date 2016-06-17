@@ -8,27 +8,27 @@
 
 import Foundation
 
-class ToDoItem
+public class ToDoItem
 {
     var id: Int
     var title: String
     var description: String
     var estPomodoroAmount: Int
-    var deadline: datum
+    var deadline: NSDate
     var completed: Bool
     var childId: Int?
     
-    init(id: Int, title: String, description: String, estAmount: Int, deadline: datum)
+    init(id: Int, title: String, description: String, estAmount: Int, deadline: NSDate, completed : Bool)
     {
         self.id = id
         self.title = title
         self.description = description
         self.estPomodoroAmount = estAmount
         self.deadline = deadline
-        self.completed = false
+        self.completed = completed
     }
     
-    init(id: Int, title: String, description: String, estAmount: Int, deadline: datum, childId: Int)
+    init(id: Int, title: String, description: String, estAmount: Int, deadline: NSDate, childId: Int, completed : Bool)
     {
         self.id = id
         self.title = title
@@ -37,5 +37,6 @@ class ToDoItem
         self.deadline = deadline
         self.completed = false
         self.childId = childId
+        self.completed = completed
     }
 }

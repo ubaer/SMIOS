@@ -18,6 +18,15 @@ public class ToDoItem
     var completed: Bool
     var childId: Int?
     
+    init(title: String, description: String, estAmount: Int, deadline: NSDate) {
+        self.id = -1
+        self.title = title
+        self.description = description
+        self.estPomodoroAmount = estAmount
+        self.deadline = deadline
+        self.completed = false
+    }
+    
     init(id: Int, title: String, description: String, estAmount: Int, deadline: NSDate)
     {
         self.id = id

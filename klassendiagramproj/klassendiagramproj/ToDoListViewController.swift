@@ -37,15 +37,19 @@ class ToDoListViewController: UIViewController, UITextFieldDelegate, UITableView
                 (date) -> Void in
                 let str = "\(date)"
                 print(str)
-                let subStr = str[str.startIndex.advancedBy(0)...str.startIndex.advancedBy(18)]
+                let subStr = str[str.startIndex.advancedBy(0)...str.startIndex.advancedBy(9)]
                 
                 
                 let dateFormatter = NSDateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+                dateFormatter.dateFormat = "yyyy-MM-dd"
                 
                 let deadlineDate = dateFormatter.dateFromString(subStr)
                 
-                var toDoItem = ToDoItem(id: self.itemArray.count + 1, title: self.itemTitle, description: self.itemDescription, estAmount: self.itemEstPomodoro, deadline: deadlineDate!)
+                let userId:Int = Int(PersistenceService.get("LoggedInUserId") as! NSNumber)
+                
+                let newId = DatabaseService.insertToDoItem(self.itemTitle, description: self.itemDescription, estPmdAmount: self.itemEstPomodoro, userId: userId, deadline: subStr)
+                
+                var toDoItem = ToDoItem(id: newId, title: self.itemTitle, description: self.itemDescription, estAmount: self.itemEstPomodoro, deadline: deadlineDate!)
                 
                 self.itemArray.append(toDoItem)
                 
@@ -99,10 +103,12 @@ class ToDoListViewController: UIViewController, UITextFieldDelegate, UITableView
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var selectedRow = self.toDoItemList.indexPathForSelectedRow
-        var selectedItem = self.itemArray[selectedRow!.row]
-        var controller = segue.destinationViewController as! PomodoroViewController
+        if (selectedRow != nil) {
+            var selectedItem = self.itemArray[selectedRow!.row]
+            var controller = segue.destinationViewController as! PomodoroViewController
         
-        controller.item = selectedItem
+            controller.item = selectedItem
+        }
     }
     
     override func viewDidLoad() {
@@ -122,6 +128,8 @@ class ToDoListViewController: UIViewController, UITextFieldDelegate, UITableView
         
         let toDoItems:Array<ToDoItem> = DatabaseService.getToDoItems(LoggedInUser.id)
         print(toDoItems.count)
+        itemArray.appendContentsOf(toDoItems)
+        self.toDoItemList.reloadData()
     }
     
     func respond(gesture :UIGestureRecognizer) {

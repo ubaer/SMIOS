@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a9x-XQ-kGG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a9x-XQ-kGG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -110,20 +110,42 @@
                         <viewControllerLayoutGuide type="bottom" id="aJp-3H-W59"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OdZ-As-8ao">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YR6-1j-1jo">
-                                <rect key="frame" x="279" y="250" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YR6-1j-1jo">
+                                <rect key="frame" x="68" y="178" width="199" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjU-9L-hl3">
+                                <rect key="frame" x="68" y="123" width="199" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <color key="textColor" red="0.31372549019607843" green="0.70588235294117641" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULx-ki-6F1">
+                                <rect key="frame" x="20" y="385" width="50" height="50"/>
+                                <state key="normal" image="distraction"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74a-Pb-Mfd">
+                                <rect key="frame" x="140" y="389" width="54" height="42"/>
+                                <state key="normal" image="studymode_white"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xh-bd-VmO">
+                                <rect key="frame" x="275" y="381" width="50" height="50"/>
+                                <state key="normal" image="finish"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="btnDistraction" destination="ULx-ki-6F1" id="65D-11-PZl"/>
+                        <outlet property="btnFinish" destination="7xh-bd-VmO" id="VRZ-qB-Q1D"/>
+                        <outlet property="btnStudyMode" destination="74a-Pb-Mfd" id="ryK-X2-frL"/>
                         <outlet property="lblItem" destination="YR6-1j-1jo" id="QNz-f3-RkV"/>
+                        <outlet property="lblTimeLeft" destination="gjU-9L-hl3" id="eKJ-Ce-CQC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jlb-lL-Bio" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,7 +250,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qgf-hv-9rm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aVr-UU-4aM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Statistics Scherm" translatesAutoresizingMaskIntoConstraints="NO" id="Ucc-Hb-eJG">
@@ -263,7 +285,7 @@
                                         <rect key="frame" x="0.0" y="28" width="318" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GwJ-1Y-yEO" id="FXF-cg-gyE">
-                                            <rect key="frame" x="0.0" y="0.0" width="318" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -453,15 +475,18 @@
     <resources>
         <image name="BGImage" width="1242" height="2208"/>
         <image name="Statistics Scherm" width="1242" height="2208"/>
+        <image name="distraction" width="96" height="96"/>
+        <image name="finish" width="170" height="170"/>
         <image name="log-out" width="72" height="84"/>
         <image name="logo-nomi" width="562" height="565"/>
         <image name="preferencesButton" width="138" height="141"/>
         <image name="statsButton" width="138" height="138"/>
         <image name="studymode" width="138" height="108"/>
+        <image name="studymode_white" width="132" height="99"/>
         <image name="to-do" width="102" height="93"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="y1z-rB-VLd"/>
         <segue reference="jAw-fd-Qz4"/>
+        <segue reference="RKN-2N-5Dk"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -22,6 +22,9 @@ class PomodoroViewController: UIViewController {
     @IBOutlet weak var btnStudyMode: UIButton!
     @IBOutlet weak var btnDistraction: UIButton!
     @IBOutlet weak var lblTimeLeft: UILabel!
+    
+    var notificationCenter:NSNotificationCenter? = nil
+    var dataService:PhoneDataService? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +42,8 @@ class PomodoroViewController: UIViewController {
             object: nil)
         
         // Do any additional setup after loading the view.
+        addSelfAsListener()
+        startMeasuring()
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,7 +58,7 @@ class PomodoroViewController: UIViewController {
             timer?.invalidate();
             lblTimeLeft.text = "Pomodoro completed!";
             playSound()
-            
+            stopMeasuring()
         }
         
         if(seconds < 10){
@@ -86,6 +91,31 @@ class PomodoroViewController: UIViewController {
     //This function gets called when the phone is unlocked aka a distrction
     @objc func deviceLocked(notification: NSNotification){
         //do database call to add distraction by unlocking phone
+    }
+    
+    //  Audio level monitoring
+    func addSelfAsListener() {
+        notificationCenter = NSNotificationCenter.defaultCenter()
+        notificationCenter?.addObserver(self, selector: #selector(self.processObserverNotification(_:)), name: "DecibelLevelChangeNotification", object: nil)
+        NSLog("ViewController added as observer for DecibelLevelChangeNotification")
+        
+    }
+    
+    func startMeasuring() {
+        //  dataService = PhoneDataService()
+        PhoneDataService.prepare()
+        PhoneDataService.startMeasuring()
+    }
+    
+    @objc func processObserverNotification(notification : NSNotification) {
+        let notificationDictionary:[NSObject : AnyObject] = notification.userInfo! as [NSObject : AnyObject]
+        let avgDecibelLevel:Float! = notificationDictionary["AverageLevel"] as! Float
+        NSLog("Average decibel level" + String(avgDecibelLevel))
+        //  Database call to save avg. sound level
+    }
+    
+    func stopMeasuring() {
+        PhoneDataService.stopMeasuring()
     }
 
 }

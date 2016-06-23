@@ -14,7 +14,7 @@ class PomodoroViewController: UIViewController {
     
     var item: ToDoItem?
     var minutes = 0;
-    var seconds = 15;
+    var seconds = 40;
     var timer: NSTimer? = nil
     
     @IBOutlet weak var lblItem: UILabel!
@@ -64,6 +64,44 @@ class PomodoroViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func btnFinish(sender: AnyObject) {
+        timer?.invalidate()
+        stopMeasuring()
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc : AnyObject! = storyBoard.instantiateViewControllerWithIdentifier("ToDoListViewController")
+        UIView.performWithoutAnimation {
+            self.showViewController(vc as! ToDoListViewController, sender: vc)
+        }
+    }
+    
+    @IBAction func btnDistraction_Click(sender: AnyObject) {
+        timer?.invalidate()
+        
+        var distractionDescription:String = ""
+        
+        var descriptionTextField: UITextField?
+        let alertController = UIAlertController(title: "Add distraction", message: "Fill out the required fields", preferredStyle: .Alert)
+        let ok = UIAlertAction(title: "Confirm", style: .Cancel, handler: { (action) -> Void in
+            distractionDescription = (descriptionTextField?.text)!
+            
+            self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(PomodoroViewController.update), userInfo: nil, repeats: true)
+        })
+        let cancel = UIAlertAction(title: "Cancel", style: .Default) { (action) -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        alertController.addAction(ok)
+        alertController.addAction(cancel)
+        alertController.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            // descriptionTextField the textfiled customization code here.
+            descriptionTextField = textField
+            descriptionTextField?.placeholder = "Description"
+        }
+        
+        presentViewController(alertController, animated: true, completion: nil)
     }
     
     //This update gets called every second by the timer. It is used to count down the pomodoro timer

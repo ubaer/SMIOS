@@ -22,6 +22,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let vc : AnyObject! = storyBoard.instantiateViewControllerWithIdentifier("ToDoListViewController")
             self.showViewController(vc as! ToDoListViewController, sender: vc)
+        } else {
+            let alert = UIAlertController(title: "Login failed", message: "Username and password combination is incorrect", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Try again", style: .Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     

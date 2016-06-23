@@ -39,7 +39,7 @@ public class PhoneDataService : PService {
         
         //create AnyObject of settings
         settings = [
-            AVFormatIDKey:Int(kAudioFormatAppleIMA4), //Int required in Swift2
+            AVFormatIDKey:Int(kAudioFormatAppleIMA4),
             AVSampleRateKey:44100.0,
             AVNumberOfChannelsKey:2,
             AVEncoderBitRateKey:12800,
@@ -50,7 +50,8 @@ public class PhoneDataService : PService {
     
     public static func startMeasuring() {
         audioSession = AVAudioSession.sharedInstance()
-        try! self.audioSession!.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        //try! self.audioSession!.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        try! self.audioSession!.setCategory(AVAudioSessionCategoryRecord)
         try! self.audioSession!.setActive(true)
         try! self.audioRecorder = AVAudioRecorder(URL: tempAudioFileLocation!, settings: settings!)
         self.audioRecorder?.meteringEnabled = true
@@ -61,7 +62,7 @@ public class PhoneDataService : PService {
     
     @objc private static func measureAudioTimerCallback(){
         //  UpdateMeters() moet aangeroepen worden om het huidige geluidsniveau te verkrijgen.
-        try! audioSession?.setPreferredInputNumberOfChannels(1)
+        //  try! audioSession?.setPreferredInputNumberOfChannels(1)
         audioRecorder!.updateMeters()
         
         let positiveLevel:Float = audioRecorder!.averagePowerForChannel(0) * (-1.0)
@@ -71,16 +72,15 @@ public class PhoneDataService : PService {
         counter = counter + 1.0
         levelTotal = levelTotal + logarithmicLevel
         averageLevel = levelTotal / counter
+        let phoneData:[NSObject : AnyObject] = ["DecibelLevel" : logarithmicLevel]
+        notificationCenter?.postNotificationName("DecibelLevelChangeNotification", object: nil, userInfo: phoneData as [NSObject : AnyObject])
     }
     
     public static func stopMeasuring() {
-        let phoneData:[NSObject : AnyObject] = ["AverageLevel" : averageLevel]
-        notificationCenter?.postNotificationName("DecibelLevelChangeNotification", object: nil, userInfo: phoneData as [NSObject : AnyObject])
-        
         audioTimer.invalidate()
-        try! self.audioSession?.setActive(false)
         audioRecorder?.stop()
-        //  audioRecorder?.deleteRecording()
+        try! AVAudioSession.sharedInstance().setActive(false)
+        audioRecorder?.deleteRecording()
         
         do {
             try fileManager?.removeItemAtURL(tempAudioFileLocation!)

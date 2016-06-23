@@ -141,6 +141,12 @@
                                 <rect key="frame" x="275" y="381" width="50" height="50"/>
                                 <state key="normal" image="finish"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-- db" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rs-7B-z4N">
+                                <rect key="frame" x="112" y="235" width="110" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -148,6 +154,7 @@
                         <outlet property="btnDistraction" destination="ULx-ki-6F1" id="65D-11-PZl"/>
                         <outlet property="btnFinish" destination="7xh-bd-VmO" id="VRZ-qB-Q1D"/>
                         <outlet property="btnStudyMode" destination="74a-Pb-Mfd" id="ryK-X2-frL"/>
+                        <outlet property="lblDecibelLevel" destination="2rs-7B-z4N" id="U6P-fW-tgo"/>
                         <outlet property="lblItem" destination="YR6-1j-1jo" id="QNz-f3-RkV"/>
                         <outlet property="lblTimeLeft" destination="gjU-9L-hl3" id="eKJ-Ce-CQC"/>
                     </connections>

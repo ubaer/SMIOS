@@ -272,7 +272,7 @@ public class DatabaseService {
                 
                 let deadlineDate = dateFormatter.dateFromString(deadline)
                 
-                toDoItems.append(ToDoItem(id: toDoItemId, title: title, description: description, estAmount: estPmdAmount, deadline: deadlineDate!, childId: completedBool))
+                toDoItems.append(ToDoItem(id: toDoItemId, title: title, description: description, estAmount: estPmdAmount, deadline: deadlineDate!, completed: completedBool))
             }
         } else {
             var error_msg:NSString

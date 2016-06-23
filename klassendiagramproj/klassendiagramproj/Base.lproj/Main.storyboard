@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a9x-XQ-kGG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a9x-XQ-kGG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,13 +8,13 @@
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="klassendiagramproj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="klassendiagramproj" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BGImage" translatesAutoresizingMaskIntoConstraints="NO" id="3cc-bP-D1O">
@@ -67,16 +67,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvf-xx-jEy">
-                                <rect key="frame" x="137" y="359" width="54" height="30"/>
-                                <color key="backgroundColor" red="0.31372549019607843" green="0.70588235294117641" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnLogin_Touch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G78-RX-mAH"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't have an account yet?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYb-4z-1Xy">
                                 <rect key="frame" x="40" y="432" width="188" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -92,14 +82,28 @@
                                     <segue destination="LtI-u4-ivw" kind="show" id="XQa-bS-boA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvf-xx-jEy">
+                                <rect key="frame" x="126" y="372" width="54" height="30"/>
+                                <color key="backgroundColor" red="0.31372549019607843" green="0.70588235294117641" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVR-eR-IGJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="lME-o2-9Wl"/>
+                    <connections>
+                        <outlet property="tfPassword" destination="XT4-yX-78m" id="xPx-hn-bKy"/>
+                        <outlet property="tfUsername" destination="8d7-CR-q5M" id="MNW-90-WlY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="485" y="1129"/>
+            <point key="canvasLocation" x="539" y="1129"/>
         </scene>
         <!--Pomodoro View Controller-->
         <scene sceneID="ev9-bX-49Z">
@@ -285,7 +289,7 @@
                                         <rect key="frame" x="0.0" y="28" width="318" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GwJ-1Y-yEO" id="FXF-cg-gyE">
-                                            <rect key="frame" x="0.0" y="0.0" width="318" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -330,13 +334,13 @@
         <!--Register-->
         <scene sceneID="XPi-F9-FRd">
             <objects>
-                <viewController id="LtI-u4-ivw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController" id="LtI-u4-ivw" customClass="RegisterViewController" customModule="klassendiagramproj" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jHZ-ab-32O"/>
                         <viewControllerLayoutGuide type="bottom" id="O80-bg-VD4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Cd5-4l-GmH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BGImage" translatesAutoresizingMaskIntoConstraints="NO" id="glB-KU-c7a">
@@ -415,17 +419,21 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="jAw-fd-Qz4"/>
+                                    <action selector="btnRegister:" destination="LtI-u4-ivw" eventType="touchUpInside" id="SzW-8a-M7k"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="oor-Hh-SsX"/>
+                    <connections>
+                        <outlet property="tfPassword" destination="ghF-2X-HNl" id="6Hh-9o-ym6"/>
+                        <outlet property="tfUsername" destination="dlx-RH-oBg" id="UEg-n8-2Lb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yas-hF-Wtz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1249" y="1122"/>
+            <point key="canvasLocation" x="1249" y="1129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aXI-RM-Usy">
@@ -486,7 +494,6 @@
         <image name="to-do" width="102" height="93"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jAw-fd-Qz4"/>
         <segue reference="RKN-2N-5Dk"/>
     </inferredMetricsTieBreakers>
 </document>

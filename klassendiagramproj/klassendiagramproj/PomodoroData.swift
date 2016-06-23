@@ -27,5 +27,6 @@ public class PomodoroData
         self.id = id
         self.description = description
         self.value = value
+        self.unit = EUnit.Times
     }
 }

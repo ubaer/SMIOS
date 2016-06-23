@@ -32,6 +32,7 @@ public class DatabaseService {
             let loggedInUser = User(id : userId, username: userUsername, firstName: userFirstName, lastName: userLastName)
             
             PersistenceService.store("LoggedInUser", value: loggedInUser)
+            PersistenceService.store("LoggedInUserId", value: loggedInUser.id)
         } else {
             var error_msg:NSString
             
@@ -203,7 +204,7 @@ public class DatabaseService {
         return true
     }
     
-    public static func insertToDoItem(title : String, description : String, estPmdAmount : Int, userId : Int, deadline : String) -> Bool {
+    public static func insertToDoItem(title : String, description : String, estPmdAmount : Int, userId : Int, deadline : String) -> Int {
         let url = "https://www.ninovrijman.nl/nomi/phpScripts/nomi_new_todo_item.php"
         let postString:NSString = "title=\(title)&description=\(description)&estPmdAmount=\(estPmdAmount)&userId=\(userId)&deadline=\(deadline)"
         
@@ -212,6 +213,8 @@ public class DatabaseService {
         let jsonData:NSDictionary = executeDatabaseAction(postString, phpUrl: url)
         
         let success:NSInteger = jsonData.valueForKey("success") as! NSInteger
+        
+        let newId:NSInteger = jsonData.valueForKey("newId") as! NSInteger
         
         NSLog("Success code (0 = failed, 1 = succeeded): %ld", success);
         
@@ -228,10 +231,10 @@ public class DatabaseService {
             }
             NSLog("Inserting learning session failed : " + (error_msg as String))
             
-            return false
+            return -1
         }
         
-        return true
+        return Int(newId)
     }
     
     public static func getToDoItems(userId : Int) -> Array<ToDoItem> {
@@ -255,12 +258,12 @@ public class DatabaseService {
             
             for toDoItem in toDoItemsJSON {
                 //  De dictionary van een enkele groupmember wordt uitgelezen en omgezet naar een User object.
-                let toDoItemId:Int = toDoItem.valueForKey("id") as! Int
+                let toDoItemId:Int = Int(toDoItem.valueForKey("id") as! String)!
                 let title:String = toDoItem.valueForKey("title") as! String
                 let description:String = toDoItem.valueForKey("description") as! String
-                let estPmdAmount:Int = toDoItem.valueForKey("estPomodorAmount") as! Int
+                let estPmdAmount:Int = Int(toDoItem.valueForKey("estPomodorAmount") as! String)!
                 let deadline:String = toDoItem.valueForKey("deadline") as! String
-                let completedInt:Int = toDoItem.valueForKey("completed") as! Int
+                let completedInt:Int = Int(toDoItem.valueForKey("completed") as! String)!
                 
                 var completedBool:Bool = false
                 if (completedInt == 1) {
@@ -268,11 +271,15 @@ public class DatabaseService {
                 }
                 
                 let dateFormatter = NSDateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+                dateFormatter.dateFormat = "yyyy-MM-dd"
                 
                 let deadlineDate = dateFormatter.dateFromString(deadline)
                 
+<<<<<<< HEAD
                 toDoItems.append(ToDoItem(id: toDoItemId, title: title, description: description, estAmount: estPmdAmount, deadline: deadlineDate!, childId: completedBool))
+=======
+                toDoItems.append(ToDoItem(id: toDoItemId, title: title, description: description, estAmount: estPmdAmount, deadline: deadlineDate!))
+>>>>>>> origin/master
             }
         } else {
             var error_msg:NSString
@@ -360,7 +367,7 @@ public class DatabaseService {
                 let value:String = pomodoroData.valueForKey("value") as! String
                 let unit:String = pomodoroData.valueForKey("unit") as! String
                 
-                var newData:PomodoroData = PomodoroData(id: pomodoroDataId, description: description, value: value)
+                let newData:PomodoroData = PomodoroData(id: pomodoroDataId, description: description, value: value)
                 
                 for enumValue in EUnit.EUnitValues {
                     if (enumValue.rawValue == unit) {
@@ -484,7 +491,7 @@ public class DatabaseService {
         return sleepDataSet
     }
     
-    public static func executeDatabaseAction(postData : NSString, phpUrl : String) -> NSDictionary {
+    private static func executeDatabaseAction(postData : NSString, phpUrl : String) -> NSDictionary {
         //  Meesturen van username en password
         let post:NSString = postData
         
@@ -517,9 +524,10 @@ public class DatabaseService {
         }
         
         if (urlData != nil) {
-            let res = response as! NSHTTPURLResponse!;
+            let res = response as! NSHTTPURLResponse!
             
-            NSLog("Response code: %ld", res.statusCode);
+            NSLog("Response code: %ld", res.statusCode)
+            //NSLog("Response message: \(res.debugDescription) ")
             
             if (res.statusCode >= 200 && res.statusCode < 300)
             {
@@ -539,11 +547,11 @@ public class DatabaseService {
                 return jsonData
             } else {
                 NSLog("Execution failed : error code in response")
-                return [:]
+                return ["success":0]
             }
         } else {
             NSLog("Connection Failed, url : \(phpUrl)")
-            return [:]
+            return ["success":0]
         }
 
     }

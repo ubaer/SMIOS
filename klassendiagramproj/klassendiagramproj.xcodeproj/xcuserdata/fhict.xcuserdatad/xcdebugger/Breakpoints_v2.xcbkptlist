@@ -19,5 +19,68 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "klassendiagramproj/PersistenceService.swift"
+            timestampString = "487857876.853384"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "getSharedInstance()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "klassendiagramproj.PersistenceService.sharedInstance.unsafeMutableAddressor : klassendiagramproj.PersistenceService"
+                  moduleName = "klassendiagramproj"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fhict/Desktop/SMIOS/klassendiagramproj/klassendiagramproj/PersistenceService.swift"
+                  timestampString = "487858636.865522"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static klassendiagramproj.PersistenceService.sharedInstance.getter : klassendiagramproj.PersistenceService"
+                  moduleName = "klassendiagramproj"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fhict/Desktop/SMIOS/klassendiagramproj/klassendiagramproj/PersistenceService.swift"
+                  timestampString = "487858636.865652"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static klassendiagramproj.PersistenceService.sharedInstance.setter : klassendiagramproj.PersistenceService"
+                  moduleName = "klassendiagramproj"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fhict/Desktop/SMIOS/klassendiagramproj/klassendiagramproj/PersistenceService.swift"
+                  timestampString = "487858636.865777"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

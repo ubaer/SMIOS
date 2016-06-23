@@ -18,4 +18,8 @@ public class PersistenceService {
         store[key] = value
         return true
     }
+    
+    static func get(key : String) -> AnyObject {
+        return store[key]!
+    }
 }

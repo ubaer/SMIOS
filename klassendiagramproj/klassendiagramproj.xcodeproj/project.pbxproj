@@ -10,7 +10,12 @@
 		3E3F9D3F1D0AC5FA0003F9A0 /* PService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F9D3E1D0AC5FA0003F9A0 /* PService.swift */; };
 		3E3F9D411D0AC86B0003F9A0 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F9D401D0AC86B0003F9A0 /* PersistenceService.swift */; };
 		3E3F9D431D0ACDB80003F9A0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3F9D421D0ACDB80003F9A0 /* RegisterViewController.swift */; };
+		3E5B77B11D1AF3F30004A090 /* PhoneDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B77B01D1AF3F30004A090 /* PhoneDataService.swift */; };
 		F5538A741D12D2E60001365D /* alarm1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5538A731D12D2E60001365D /* alarm1.mp3 */; };
+<<<<<<< HEAD
+=======
+		F56803651D14157F005B6A9C /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56803641D14157F005B6A9C /* DatePickerDialog.swift */; };
+>>>>>>> origin/master
 		F56949231D13EC7B009BD1B4 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56949221D13EC7B009BD1B4 /* ToDoListViewController.swift */; };
 		F56949251D140CE3009BD1B4 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56949241D140CE3009BD1B4 /* DatabaseService.swift */; };
 		F56949271D140CEE009BD1B4 /* DatePickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56949261D140CEE009BD1B4 /* DatePickerDialog.swift */; };
@@ -54,7 +59,13 @@
 		3E3F9D3E1D0AC5FA0003F9A0 /* PService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PService.swift; sourceTree = "<group>"; };
 		3E3F9D401D0AC86B0003F9A0 /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		3E3F9D421D0ACDB80003F9A0 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		F5538A731D12D2E60001365D /* alarm1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm1.mp3; path = ../../../alarm1.mp3; sourceTree = "<group>"; };
+=======
+		3E5B77B01D1AF3F30004A090 /* PhoneDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneDataService.swift; sourceTree = "<group>"; };
+		F5538A731D12D2E60001365D /* alarm1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm1.mp3; sourceTree = "<group>"; };
+		F56803641D14157F005B6A9C /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
+>>>>>>> origin/master
 		F56949221D13EC7B009BD1B4 /* ToDoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		F56949241D140CE3009BD1B4 /* DatabaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		F56949261D140CEE009BD1B4 /* DatePickerDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerDialog.swift; sourceTree = "<group>"; };
@@ -114,6 +125,7 @@
 				F56949241D140CE3009BD1B4 /* DatabaseService.swift */,
 				3E3F9D3E1D0AC5FA0003F9A0 /* PService.swift */,
 				3E3F9D401D0AC86B0003F9A0 /* PersistenceService.swift */,
+				3E5B77B01D1AF3F30004A090 /* PhoneDataService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -141,6 +153,7 @@
 		F5F48AEE1CF840D60082417F /* klassendiagramproj */ = {
 			isa = PBXGroup;
 			children = (
+				F56803641D14157F005B6A9C /* DatePickerDialog.swift */,
 				3E3F9D3B1D0AC5BA0003F9A0 /* Services */,
 				F5538A731D12D2E60001365D /* alarm1.mp3 */,
 				F5F48AEF1CF840D60082417F /* AppDelegate.swift */,
@@ -324,10 +337,16 @@
 				F5F48B221CF843800082417F /* SleepData.swift in Sources */,
 				F5AC821D1D12C7D400DDE92A /* PomodoroViewController.swift in Sources */,
 				F5F48B281CF8459C0082417F /* Pomodoro.swift in Sources */,
+				3E5B77B11D1AF3F30004A090 /* PhoneDataService.swift in Sources */,
 				F5F48AF01CF840D60082417F /* AppDelegate.swift in Sources */,
 				F5F48B241CF844D80082417F /* User.swift in Sources */,
 				F5F48B2A1CF845F40082417F /* PomodoroData.swift in Sources */,
+<<<<<<< HEAD
 				F56949271D140CEE009BD1B4 /* DatePickerDialog.swift in Sources */,
+=======
+				3E3F9D3D1D0AC5F00003F9A0 /* DatabaseService.swift in Sources */,
+				F56803651D14157F005B6A9C /* DatePickerDialog.swift in Sources */,
+>>>>>>> origin/master
 				3E3F9D411D0AC86B0003F9A0 /* PersistenceService.swift in Sources */,
 				3E3F9D431D0ACDB80003F9A0 /* RegisterViewController.swift in Sources */,
 				F5F48B201CF841EA0082417F /* ToDoItem.swift in Sources */,
